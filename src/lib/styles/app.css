@@ -1,0 +1,24 @@
+:root{
+	--nav-width: 96px;
+	color-scheme: dark;
+	
+	--bg: #11151Dff;
+	--light-accent: #AFCCA0ff;
+	--dark-accent: #4C5548;
+	--extras-one: #3b3b3b;
+	--extras-two: #A9A4A8ff;
+	
+	
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: var(--bg);
+}
