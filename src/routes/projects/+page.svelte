@@ -2,12 +2,33 @@
     import Card from "$lib/components/card.svelte";
     import project1 from "$lib/assets/project1.webp";
     
+    function calcularTiempo(fechaInicio) {
+    const fechaActual = new Date();
+    const fechaInicial = new Date(fechaInicio);
+
+    let años = fechaActual.getFullYear() - fechaInicial.getFullYear();
+    let meses = fechaActual.getMonth() - fechaInicial.getMonth();
+
+    if (meses < 0) {
+        años--;
+        meses += 12;
+    }
+
+    let resultado = "Hace ";
+    if (años > 0) {
+        resultado += `${años} años y `;
+    }
+    resultado += `${meses} meses`;
+
+    return resultado;
+}
+
     const projects = [
     {
         name: "A random application of water sensors",
         acron: "FP-CS 2024 - Proyecto de Angular",
         src: project1,
-        description: "Este es el primer proyecto que hice con Angular, hace 3 meses, en el cual aprendi a montar una aplicación de monitorización de sensores de agua. El proyecto fue un gran desafío para aprender sobre JS, TS, y Angular",
+        description: "Este es el primer proyecto que hice con Angular, " + calcularTiempo("2024-06-12")+ ", en el cual aprendi a montar una aplicación de monitorización de sensores de agua. El proyecto fue un gran desafío para aprender sobre JS, TS, y Angular",
         github: "https://github.com/jmgf-49/a_random_application_of_water_sensors",
         web: "https://jmgf-49.github.io/a_random_application_of_water_sensors/"
     }
