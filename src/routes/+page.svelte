@@ -153,7 +153,7 @@
         }
         
         #avatar img{
-            width: clamp(100px, 100%, 350px);
+            width: clamp(100px, 50%, 300px);
             aspect-ratio: 1/1;
             margin: auto;
             border-radius: 32% 68% 42% 58% / 52% 34% 66% 48%  ;
@@ -167,7 +167,7 @@
             gap: 1em;
 
             margin:4em auto auto auto;
-        }   
+        }    
         
     }
     
